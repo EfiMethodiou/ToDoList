@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {  
+  font-family: "Roboto", Arial, sans-serif;  
+  background-color: #F0FAFF;
+}
+
+#page {
+  position: absolute;  
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  color: #344053;
+}
+.main{
+  padding-top: 30px;
+}
+
+.main h4 {
+  font-family: "Roboto", Arial, sans-serif;
+  color: #344a53;  
+  margin: 0;
+  padding: 0;  
+}
+
+.main h4 #welcome:hover{
+  background: -webkit-linear-gradient(#00c9f9, #00fe23);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media screen and (max-width: 400px){
+  .main h4 {
+    margin-top: -8px;
+  }
+}
+
+@media screen and (max-width: 350px){  
+  #page{
+    height: 10vh;
+  }
+  .main h4{
+    margin-top: -20px;
+    font-size: 2.2vh;
+  }
+}
+
+
+
+
+
+
+

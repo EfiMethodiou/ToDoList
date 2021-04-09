@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ToDos</title>
+    <meta charset="UTF.8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/lists.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/message.css">
+    <link rel="stylesheet" href="css/info_parag.css">
+    <!--Loader scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--Footer-->
+    <script src="https://kit.fontawesome.com/54d0b8d849.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--Loader-->
+    <div class="loader_bg">
+        <div class="container">
+            
+            <div class="hex">
+                <div>
+                    <span class="one side6"></span>
+                    <span class="two side3"></span>
+                </div>
+            </div>            
+            <div class="hex">
+                <div>
+                    <span class="one side1"></span>
+                    <span class="two side4"></span>
+                </div>
+            </div>            
+            <div class="hex">
+                <div>
+                    <span class="one side5"></span>
+                    <span class="two side2"></span>
+                </div>
+            </div> 
+            <div class="loader_image"> 
+                <img src="img/loader_logo.png">
+            </div> 
+        </div>             
+    </div> 
+   
+    <!--Main Page-->
+    <div id="page">
+        <div class="header">
+            <h2><a id="todos">ToDos</a></h2>
+            <h3>
+                <div class="content__container">
+                    <ul class="content__container__list">
+                        <li class="content__container__list__item">Don't stop until you're proud.</li>
+                        <li class="content__container__list__item">Good things take time.</li>
+                        <li class="content__container__list__item">Imagine Believe Achieve</li>
+                        <li class="content__container__list__item">Never forget why you started.</li>
+                    </ul>
+                </div>
+            </h3>
+            <div class="info_btn" onclick="openinfo()">
+                <svg viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M41.5 21.5C41.5 32.5457 32.5457 41.5 21.5 41.5C10.4543 41.5 1.5 32.5457 1.5 21.5C1.5 10.4543 10.4543 1.5 21.5 1.5C32.5457 1.5 41.5 10.4543 41.5 21.5Z"
+                        stroke="url(#paint0_linear)" stroke-width="3" />
+                    <path
+                        d="M23.7324 34H19.4609V14.9805H23.7324V34ZM19.1973 10.041C19.1973 9.38477 19.4023 8.83984 19.8125 8.40625C20.2344 7.97266 20.832 7.75586 21.6055 7.75586C22.3789 7.75586 22.9766 7.97266 23.3984 8.40625C23.8203 8.83984 24.0312 9.38477 24.0312 10.041C24.0312 10.6855 23.8203 11.2246 23.3984 11.6582C22.9766 12.0801 22.3789 12.291 21.6055 12.291C20.832 12.291 20.2344 12.0801 19.8125 11.6582C19.4023 11.2246 19.1973 10.6855 19.1973 10.041Z"
+                        fill="url(#paint1_linear)" />
+                    <defs>
+                        <linearGradient id="paint0_linear" x1="38.7" y1="11.9444" x2="0.477779" y2="27.2333"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#00C9F9" />
+                            <stop offset="1" stop-color="#00FE23" />
+                        </linearGradient>
+                        <linearGradient id="paint1_linear" x1="-1.57143" y1="11.8621" x2="45.1536" y2="37.3884"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#00FE23" />
+                            <stop offset="1" stop-color="#00C9F9" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="messageBackg" id="messageBackg" onclick="closeMes()">
+            </div>
+            <div class="message" id="message">
+                <div onclick="closeMes()" id="x">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                </div>
+                <h4><span>"Congratulations <a id="thisday"></a> is DONE 🚀 "</span></h4>
+            </div>
+            <div class="info_paragBackg" id="info_paragBackg" onclick="closeinfo()"></div>
+            <div class="info_parag" id="info_parag">
+                <div class="paragr">
+                    <h3>Information about this project.</h3>
+                    <p>This project was built in order to be added to my portfolio website and
+                        this is also the reason why it has some similarities with it and the
+                        main focus of this project was a create a todo list that is different
+                        from the other lists that we see online.
+                    </p>
+                    <p>The loading page is exactly the same with the main website and the colors
+                        of the header, footer and the hover details on them match the colors of the
+                        main page.
+                    </p>
+                    <h4>Let’s talk details…</h4>
+                    <p>
+                        The main feature of the header is a list of quotes that is animated that way
+                        so the user will see one quote at the time. The purpose of this list is to give
+                        motivation to the users to keep working on their tasks (p.s. that one helped me
+                        a lot while building this project too)
+                    </p>
+                    <p>
+                        The header also contains a title that if you hover over it, it changes its color and
+                        an information button that opens a pop up window which includes that paragraph that
+                        you are reading right now. In order for that popup window to close the user have to
+                        click anywhere else on the page.
+                    </p>
+                    <p>
+                        In the main part of the page above the todo lists, there is a welcome message that welcomes
+                        the user according to the day. This message is connected to JavaScript variables that checks
+                        in real time what day it is and if it’s the weekend then it welcomes the user with a different
+                        message.
+                    </p>
+                    <p>
+                        The todo lists are build that way so it will seem like they are on a carousel. Depending on
+                        which day is it the carousel is landing on that day and when it’s the weekend the carousel lands
+                        by default on Monday.
+                    </p>
+                    <p>
+                        The users can add a task, delete it, check it and also delete all of them. The tasks are saved
+                        in a JSON file and the user can also see how many tasks are pending. When all the tasks are
+                        checked then a message appears that congratulates the user for finishing each day.
+                    </p>
+                    <p>
+                        Lastly, the footer contains a small title with hover animations and the link to my portfolio.
+                    </p>
+                    <p>
+                        Things that will be added to the next version of this project:
+                        <ul>
+                            <li>Saving the checked status of the tasks.</li>
+                            <li>More animations.</li>
+                        </ul>
+                    </p>
+
+
+                </div>
+            </div>
+
+            <h4><span id="welcome"><a id="day"></a>!</span></h4>
+            <div class="thelists">
+                <input id="radio" value="1" type="radio" name="position" />
+                <input id="radio" value="2" type="radio" name="position" />
+                <input id="radio" value="3" type="radio" name="position" />
+                <input id="radio" value="4" type="radio" name="position" />
+                <input id="radio" value="5" type="radio" name="position" />
+                <div class="container-wrapper" id="carousel">
+                    <!--MONDAY-->
+                    <div class="wrapper day monday">
+                        <h1>Monday</h1>
+                        <ul class="todoList todoList1">
+                            <!-- data are comes from local storage -->
+                        </ul>
+                        <div class="inputField inputField1">
+                            <input type="text" placeholder="📃 Add your task" onfocus="this.placeholder = ''"
+                                onblur="this.placeholder = '📃 Add your task'">
+                            <button class="addBtn1" id="addBtn1"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <div class="footer footer1">
+                            <span>You have <span class="pendingTasks1"></span> pending tasks</span>
+                            <button>Clear All</button>
+                        </div>
+                    </div>
+                    <!--TUESDAY-->
+                    <div class="wrapper day tuesday">
+                        <h1>Tuesday</h1>
+                        <ul class="todoList todoList2">
+                        </ul>
+                        <div class="inputField inputField2">
+                            <input type="text" placeholder="📃 Add your task" onfocus="this.placeholder = ''"
+                                onblur="this.placeholder = '📃 Add your task'">
+                            <button class="addBtn2" id="addBtn2"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <div class="footer footer2">
+                            <span>You have <span class="pendingTasks2"></span> pending tasks</span>
+                            <button>Clear All</button>
+                        </div>
+                    </div>
+                    <!--WEDNESDAY-->
+                    <div class="wrapper day wednesday">
+                        <h1>Wednesday</h1>
+                        <ul class="todoList todoList3">
+                        </ul>
+                        <div class="inputField inputField3">
+                            <input type="text" placeholder="📃 Add your task" onfocus="this.placeholder = ''"
+                                onblur="this.placeholder = '📃 Add your task'">
+                            <button class="addBtn3" id="addBtn3"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <div class="footer footer3">
+                            <span>You have <span class="pendingTasks3"></span> pending tasks</span>
+                            <button>Clear All</button>
+                        </div>
+                    </div>
+                    <!--THURSDAY-->
+                    <div class="wrapper day thursday">
+                        <h1>Thursday</h1>
+                        <ul class="todoList todoList4">
+                        </ul>
+                        <div class="inputField inputField4">
+                            <input type="text" placeholder="📃 Add your task" onfocus="this.placeholder = ''"
+                                onblur="this.placeholder = '📃 Add your task'">
+                            <button class="addBtn4" id="addBtn4"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <div class="footer footer4">
+                            <span>You have <span class="pendingTasks4"></span> pending tasks</span>
+                            <button>Clear All</button>
+                        </div>
+                    </div>
+                    <!--FRIDAY-->
+                    <div class="wrapper day friday">
+                        <h1>Friday</h1>
+                        <ul class="todoList todoList5">
+                        </ul>
+                        <div class="inputField inputField5">
+                            <input type="text" placeholder="📃 Add your task" onfocus="this.placeholder = ''"
+                                onblur="this.placeholder = '📃 Add your task'">
+                            <button class="addBtn5" id="addBtn5"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <div class="footer footer5">
+                            <span>You have <span class="pendingTasks5"></span> pending tasks</span>
+                            <button>Clear All</button>
+                        </div>
+                    </div>
+                    <!--End of days-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <footer>
+        <div class="made">
+            <h5>Made with <span id="heart" class="fas fa-heart"></span>
+                and lots of <span id="coffee" class="fas fa-coffee"></span>
+                by <a href="https://efimethodiou.com/" target="_blank" id="website">Efi Methodiou</a>
+            </h5>
+        </div>
+    </footer>
+    </div>
+
+    <!--Functions-->
+    <script src="js/script.js"></script>
+    <script src="js/monday.js"></script>
+    <script src="js/tuesday.js"></script>
+    <script src="js/wednesday.js"></script>
+    <script src="js/thursday.js"></script>
+    <script src="js/friday.js"></script>
+
+</body>
+
+</html>
