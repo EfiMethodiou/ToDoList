@@ -5,12 +5,27 @@ const inputBox1 = document.querySelector(".monday .inputField1 input");
 const addBtn1 = document.querySelector(".monday .inputField1 button");
 const todoList1 = document.querySelector(".monday .todoList1");
 const deleteAllBtn1 = document.querySelector(".monday .footer1 button");
-var crossed1 = 0; //count the crossed items of the todo list 
-var alerted1 = false //makes sure the message appears on the right moment
+var crossed1 = 0; //count the crossed items of the todo list
+var alerted1 = false; //makes sure the message appears on the right moment
+
+//setting default data so it will look better
+var defaultInput1 = [
+  "Monday Task 1",
+  "Monday Task 2",
+  "Monday Task 3",
+  "Monday Task 4",
+];
+let getLocalStorageData = localStorage.getItem("Mon Todo");
+window.onload = function () { //add this data only on the first load
+  if (localStorage.getItem("hasCodeRunBefore") === null) {       
+    localStorage.setItem("Mon Todo", JSON.stringify(defaultInput1));
+    localStorage.setItem("hasCodeRunBefore", true);
+  }
+};
 
 // onkeyup event
 inputBox1.onkeyup = () => {
-  crossed1 = 0;  //restart counting 
+  crossed1 = 0; //restart counting
   alerted1 = false;
   console.log(crossed1 + " this one");
   let userEnteredValue = inputBox1.value; //getting user entered value
@@ -46,7 +61,7 @@ addBtn1.onclick = () => {
   listArray1.push(userEnteredValue); //pushing or adding new value in array
   localStorage.setItem("Mon Todo", JSON.stringify(listArray1)); //transforming js object into a json string
   showTasks1(); //calling showTask function
-  addBtn1.classList.remove("active"); //unactive the add button once the task added  
+  addBtn1.classList.remove("active"); //unactive the add button once the task added
 };
 
 function showTasks1() {
@@ -81,7 +96,7 @@ const tasksNumb1 = document.querySelector(".pendingTasks1");
 tasksNumb1.textContent = listArray1.length;
 
 function checked1(index) {
-  var list = document.querySelector(".monday");  
+  var list = document.querySelector(".monday");
   list.addEventListener(
     "click",
     function (ev) {
@@ -91,7 +106,7 @@ function checked1(index) {
           ev.target.classList.toggle = "checked1";
           /*console.log("it checked it"); */
           crossed1++;
-          console.log(crossed1);  
+          console.log(crossed1);
 
           if (
             ev.target.tagName === "LI" &&
@@ -99,22 +114,21 @@ function checked1(index) {
           ) {
             if (listArray1.length - crossed1 >= 0) {
               tasksNumb1.textContent -= 1;
-
             }
           }
         }
       }
-      if (listArray1.length > 0) {        
-        if (crossed1 === listArray1.length) {          
+      if (listArray1.length > 0) {
+        if (crossed1 === listArray1.length) {
           console.log(crossed1 + " outside if " + alerted1);
-          if(!alerted1){
-            document.getElementById("thisday").innerHTML ="Monday";
-            document.getElementById("message").style.display ="block";  
-            document.getElementById("messageBackg").style.display ="block";          
+          if (!alerted1) {
+            document.getElementById("thisday").innerHTML = "Monday";
+            document.getElementById("message").style.display = "block";
+            document.getElementById("messageBackg").style.display = "block";
             alerted1 = true;
-            console.log(crossed1 + " inside if " + alerted1);  
-            crossed1 = 0;          
-          }                    
+            console.log(crossed1 + " inside if " + alerted1);
+            crossed1 = 0;
+          }
         }
       }
     },
@@ -124,7 +138,7 @@ function checked1(index) {
 
 // delete task function
 function deleteTask1(index) {
-  crossed1 = 0;  //restart counting 
+  crossed1 = 0; //restart counting
   alerted1 = false;
   let getLocalStorageData = localStorage.getItem("Mon Todo");
   listArray1 = JSON.parse(getLocalStorageData);
