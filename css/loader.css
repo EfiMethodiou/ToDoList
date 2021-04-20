@@ -211,3 +211,9 @@
   /*   91.6666667%{top:0;height:0%;}  */
 }
 
+@media screen and (max-width:300px){  
+  .loader_image{
+    left: 10%;
+    padding-top: 20%;
+  }
+}
