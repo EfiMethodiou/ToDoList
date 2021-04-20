@@ -23,12 +23,12 @@ div ::-webkit-scrollbar-thumb {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  display: none;
-  /*background-color: red rgba(0, 0, 0, 0.7)*/;
+  display: none;    
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .info_parag {
-  display: none;
+  display: none;  
   z-index: 10;
   position: absolute;
   overflow: visible;
@@ -128,7 +128,11 @@ div ::-webkit-scrollbar-thumb {
     font-size: 2vw;
   }
 }
-@media screen and (max-width: 470px) {
+@media screen and (max-width: 470px) { 
+  .info_parag{
+    left: 10%;
+    width: 80%;
+  }
   .paragr {
     padding-top: 10%;
     border-radius: 10px;
@@ -151,12 +155,30 @@ div ::-webkit-scrollbar-thumb {
   }
 }
 
-@media screen and (max-width: 280px) {
-  .info_paragBackg {
-    background-color: red;
-    height: 100%;
-  }
+@media screen and (max-width: 280px) {  
   .info_parag{
-    height: 100%;
+    width: 90%;
+    left: 5%;
+    
+  }
+  .paragr {
+    padding-top: 10%;
+    border-radius: 10px;
+  }
+  .paragr h3 {
+    font-size: 4vw;
+  }
+  .paragr p {
+    font-size: 3vw;
+  }
+  .paragr h4 {
+    padding-top: 20%;
+    font-size: 3vw;
+  }
+  .paragr ul {
+    padding-left: 7%;
+  }
+  .paragr li {
+    font-size: 3vw;
   }
 }
