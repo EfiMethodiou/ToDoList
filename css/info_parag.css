@@ -3,17 +3,16 @@ div::-webkit-scrollbar {
   background-color: #344a53;
   width: 15px;
   height: 5px;
-  
-}  
-   /* Track */
-div::-webkit-scrollbar-track { 
-  box-shadow: inset 0 0 5px grey;    
+}
+/* Track */
+div::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
 }
- 
-   /* Handle */
-div ::-webkit-scrollbar-thumb {    
-  background-image: linear-gradient(120deg, #00c9f9, #00fe2e); 
+
+/* Handle */
+div ::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(120deg, #00c9f9, #00fe2e);
   border-radius: 30px;
 }
 
@@ -25,7 +24,7 @@ div ::-webkit-scrollbar-thumb {
   height: 100%;
   overflow: hidden;
   display: none;
-  background-color: rgba(0, 0, 0, 0.7);
+  /*background-color: red rgba(0, 0, 0, 0.7)*/;
 }
 
 .info_parag {
@@ -37,17 +36,17 @@ div ::-webkit-scrollbar-thumb {
   height: 81%;
   left: 20%;
   top: 13%;
-  background-color: #F0FAFF;
+  background-color: #f0faff;
   border-radius: 20px;
   justify-content: center;
 }
 
-.paragr{
+.paragr {
   background-color: white;
   border-left-style: solid;
   border-left-color: #00c9f9;
   justify-items: center;
-  margin: 0  5%;
+  margin: 0 5%;
   padding: 5%;
   width: 90%;
   max-height: 100%;
@@ -61,93 +60,103 @@ div ::-webkit-scrollbar-thumb {
 .paragr p {
   padding-top: 3%;
   text-align: left;
-  font-size: 1.2vw;  
+  font-size: 1.2vw;
 }
-.paragr h4{
+.paragr h4 {
   padding-top: 2%;
   text-align: left;
   font-size: 1.3vw;
 }
 
-.paragr ul{
+.paragr ul {
   padding-left: 4%;
 }
-.paragr li{
+.paragr li {
   padding-top: 1%;
   text-align: left;
   font-size: 1.2vw;
 }
 
-@media screen and (max-width: 960px){  
-  .paragr h3{
+@media screen and (max-width: 960px) {
+  .paragr h3 {
     font-size: 2vw;
   }
   .paragr p {
     font-size: 1.5vw;
   }
-  .paragr h4{
+  .paragr h4 {
     font-size: 1.8vw;
   }
-  .paragr ul{
+  .paragr ul {
     padding-left: 7%;
   }
   .paragr li {
     font-size: 1.5vw;
   }
 }
-@media screen and (max-width: 700px){  
-  .paragr h3{
+@media screen and (max-width: 700px) {
+  .paragr h3 {
     font-size: 2.5vw;
   }
   .paragr p {
     font-size: 1.8vw;
   }
-  .paragr h4{
+  .paragr h4 {
     font-size: 2vw;
   }
-  .paragr ul{
+  .paragr ul {
     padding-left: 7%;
   }
   .paragr li {
     font-size: 1.8vw;
   }
 }
-@media screen and (max-width: 560px){  
-  .paragr h3{
+@media screen and (max-width: 560px) {
+  .paragr h3 {
     font-size: 3vw;
   }
   .paragr p {
     font-size: 2vw;
   }
-  .paragr h4{
+  .paragr h4 {
     font-size: 2.2vw;
   }
-  .paragr ul{
+  .paragr ul {
     padding-left: 7%;
   }
   .paragr li {
     font-size: 2vw;
   }
 }
-@media screen and (max-width: 470px){
-  .paragr {   
+@media screen and (max-width: 470px) {
+  .paragr {
     padding-top: 10%;
-    border-radius: 10px;         
+    border-radius: 10px;
   }
-  .paragr h3{
+  .paragr h3 {
     font-size: 3vw;
   }
   .paragr p {
     font-size: 2.2vw;
   }
-  .paragr h4{
+  .paragr h4 {
     padding-top: 7%;
     font-size: 2.2vw;
   }
-  .paragr ul{
+  .paragr ul {
     padding-left: 7%;
   }
   .paragr li {
     font-size: 2.2vw;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .info_paragBackg {
+    background-color: red;
+    height: 100%;
+  }
+  .info_parag{
+    height: 100%;
   }
 }

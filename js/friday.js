@@ -8,6 +8,25 @@ const deleteAllBtn5 = document.querySelector(".friday .footer5 button");
 var crossed5 = 0; //count the crossed items of the todo list
 var alerted5 = false;
 
+
+//setting default data so it will look better
+var defaultInput5 = [
+  "Friday Task 1",
+  "Friday Task 2",
+  "Friday Task 3",
+  "Friday Task 4",
+];
+function load5(){
+  if (localStorage.getItem("hasCodeRunBefore5") === null) {       
+    console.log("hasCodeRunBefore Friday");
+    localStorage.setItem("Frid Todo", JSON.stringify(defaultInput5));
+    showTasks5();
+    localStorage.setItem("hasCodeRunBefore5", true);
+  }
+}
+//let getLocalStorageData = localStorage.getItem("Mon Todo");
+window.onload =  load5(); //add this data only on the first load
+ 
 // onkeyup event
 inputBox5.onkeyup = () => {
   crossed5 = 0; //restart counting

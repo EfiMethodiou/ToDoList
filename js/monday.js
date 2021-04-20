@@ -15,13 +15,18 @@ var defaultInput1 = [
   "Monday Task 3",
   "Monday Task 4",
 ];
-let getLocalStorageData = localStorage.getItem("Mon Todo");
-window.onload = function () { //add this data only on the first load
-  if (localStorage.getItem("hasCodeRunBefore") === null) {       
+function load1(){
+  if (localStorage.getItem("hasCodeRunBefore1") === null) {       
+    console.log("hasCodeRunBefore Monsday");
     localStorage.setItem("Mon Todo", JSON.stringify(defaultInput1));
-    localStorage.setItem("hasCodeRunBefore", true);
+    showTasks1();
+    localStorage.setItem("hasCodeRunBefore1", true);
   }
-};
+}
+//let getLocalStorageData = localStorage.getItem("Mon Todo");
+window.onload =  load1(); //add this data only on the first load
+ 
+
 
 // onkeyup event
 inputBox1.onkeyup = () => {
