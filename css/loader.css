@@ -1,5 +1,5 @@
 .loader_bg {
-  position: fixed;
+  position: absolute;
   z-index: 999999;
   background: #344053 ; 
   width: 100%;
@@ -210,4 +210,22 @@
   }
   /*   91.6666667%{top:0;height:0%;}  */
 }
-
+@media screen and (max-width:450px){  
+  .loader_image{
+    left: 1%;
+    padding-top: 10%;
+  }
+}
+@media screen and (max-width:360px){  
+  .loader_image{
+    left: 4%;
+    padding-top: 15%;
+  }  
+}
+@media screen and (max-width:280px){  
+  .loader_image{
+    left: 10%;
+    padding-top: 20%;
+  }
+  
+}
